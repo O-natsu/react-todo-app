@@ -50,6 +50,6 @@
     "trailingComma": "all"
   },
   "resolutions": {
-    "object-path": "0.11.5"
+    "object-path": "0.11.8"
   }
 }
