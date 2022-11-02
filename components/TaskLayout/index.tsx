@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, FC } from "react";
 import styled from "@emotion/styled";
 import { keyframes } from "@emotion/core";
 import { colors } from "../styles";
@@ -79,7 +79,7 @@ type Task = {
   deleted: boolean;
 };
 
-export const TaskLayout = () => {
+export const TaskLayout: FC = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const prevTask = usePrevious(tasks);
   const [deleted, setDeleted] = useState(false);

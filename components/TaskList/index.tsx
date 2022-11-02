@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, FC } from "react";
 import styled from "@emotion/styled";
 import { colors } from "../styles";
 import {
@@ -9,18 +9,18 @@ import {
   DragSourceMonitor,
 } from "react-dnd";
 
-interface Props {
+type Props = {
   index: number;
   task: string;
   onDelete: () => void;
   moveItem: (dragIndex: number, hoverIndex: number) => void;
-}
+};
 
-interface DragItem {
+type DragItem = {
   index: number;
   id: number;
   type: string;
-}
+};
 
 export const TaskList = styled.ul`
   margin: 0;
@@ -69,11 +69,11 @@ const DeleteButton = styled.button`
   }
 `;
 
-export const TaskItem = (props: Props) => {
+export const TaskItem: FC<Props> = (props: Props) => {
   const [completed, setCompleted] = useState(false);
   const liRef = useRef<HTMLLIElement>(null);
   const ref = liRef.current;
-  const [, drop] = useDrop({
+  const [, drop] = useDrop<DragItem>({
     accept: "task",
     drop(item: DragItem, monitor: DropTargetMonitor) {
       if (!ref) return;
@@ -93,7 +93,8 @@ export const TaskItem = (props: Props) => {
   });
 
   const [{ isDragging }, drag] = useDrag({
-    item: { type: "task", index: props.index },
+    type: "task",
+    item: { index: props.index },
     collect: (monitor: DragSourceMonitor) => ({
       isDragging: monitor.isDragging(),
     }),
