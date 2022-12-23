@@ -14,7 +14,7 @@
     "@emotion/styled": "10.3.0",
     "@types/node": "14.18.33",
     "@types/react": "18.0.24",
-    "@types/react-dom": "16.9.17",
+    "@types/react-dom": "18.0.10",
     "babel-plugin-emotion": "10.2.2",
     "emotion": "10.0.27",
     "emotion-server": "10.0.27",
