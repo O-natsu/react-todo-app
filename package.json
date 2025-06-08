@@ -12,7 +12,7 @@
   "dependencies": {
     "@emotion/core": "10.3.1",
     "@emotion/styled": "10.3.0",
-    "@types/node": "14.18.63",
+    "@types/node": "22.15.30",
     "@types/react": "18.3.23",
     "@types/react-dom": "16.9.25",
     "babel-plugin-emotion": "10.2.2",
