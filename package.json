@@ -24,7 +24,7 @@
     "react-dnd": "16.0.1",
     "react-dnd-html5-backend": "16.0.1",
     "react-dom": "19.2.3",
-    "react-use": "17.4.0",
+    "react-use": "17.6.0",
     "typescript": "5.8.3"
   },
   "devDependencies": {
